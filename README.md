@@ -1,5 +1,5 @@
 # SodaMachine
-Week 53-XX of Tim Corey's Weekly Challenges
+Week 53-59 of Tim Corey's Weekly Challenges
 
 ## Soda Machine Project Planning Challenge
 [Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=53)  
