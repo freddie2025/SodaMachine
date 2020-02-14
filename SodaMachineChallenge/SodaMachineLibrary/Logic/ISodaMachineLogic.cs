@@ -4,11 +4,11 @@ using System.Collections.Generic;
 namespace SodaMachineLibrary.Logic
 {
 	public interface ISodaMachineLogic
-	{
+	{ 
 		List<SodaModel> ListTypesOfSoda();
 
 		// Takes in an amount and returns the total deposited so far
-		decimal MoneyInserted(decimal monetaryAmount);
+		decimal MoneyInserted(string userId, decimal monetaryAmount);
 
 		// Get the overall price for sodas - there is no individual pricing
 		decimal GetSodaPrice();
@@ -16,13 +16,13 @@ namespace SodaMachineLibrary.Logic
 		// SodaModel (or null), List(of Coin) Change, string ErrorMessage
 		(SodaModel soda, List<CoinModel> change, string errorMessage) RequestSoda(SodaModel soda);
 
-		void IssueFullRefund();
+		void IssueFullRefund(string userId);
 
-		void GetMoneyInsertedTotal();
+		decimal GetMoneyInsertedTotal(string userId);
 
-		void AddToInventory(List<SodaModel> sodas);
+		void AddToSodaInventory(List<SodaModel> sodas);
 
-		List<SodaModel> GetInventory();
+		List<SodaModel> GetSodaInventory();
 
 		decimal EmptyMoneyFromMachine();
 
@@ -32,6 +32,6 @@ namespace SodaMachineLibrary.Logic
 
 		decimal GetCurrentIncome();
 
-		decimal GetTotalincome();
+		decimal GetTotalIncome();
 	}
 }
