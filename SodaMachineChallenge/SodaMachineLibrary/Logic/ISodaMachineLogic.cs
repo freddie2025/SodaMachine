@@ -14,7 +14,7 @@ namespace SodaMachineLibrary.Logic
 		decimal GetSodaPrice();
 
 		// SodaModel (or null), List(of Coin) Change, string ErrorMessage
-		(SodaModel soda, List<CoinModel> change, string errorMessage) RequestSoda(SodaModel soda);
+		(SodaModel soda, List<CoinModel> change, string errorMessage) RequestSoda(SodaModel soda, string userId);
 
 		void IssueFullRefund(string userId);
 

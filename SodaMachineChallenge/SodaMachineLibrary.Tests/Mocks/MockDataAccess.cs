@@ -10,7 +10,7 @@ namespace SodaMachineLibrary.Tests.Mocks
 	{
 		public List<CoinModel> CoinInventory { get; set; } = new List<CoinModel>();
 		public (decimal sodaPrice, decimal cashOnHand, decimal totalIncome) MachineInfo { get; set; }
-		public List<SodaModel> SodaInventory { get; set; }
+		public List<SodaModel> SodaInventory { get; set; } = new List<SodaModel>();
 		public Dictionary<string, decimal> UserCredit { get; set; } = new Dictionary<string, decimal>();
 
 		public MockDataAccess()
@@ -20,7 +20,7 @@ namespace SodaMachineLibrary.Tests.Mocks
 			CoinInventory.Add(new CoinModel { Name = "Quarter", Amount = 0.25M });
 			CoinInventory.Add(new CoinModel { Name = "Quarter", Amount = 0.25M });
 			CoinInventory.Add(new CoinModel { Name = "Dime", Amount = 0.1M });
-			CoinInventory.Add(new CoinModel { Name = "Dime", Amount = 0.05M });
+			CoinInventory.Add(new CoinModel { Name = "Dime", Amount = 0.1M });
 			CoinInventory.Add(new CoinModel { Name = "Nickle", Amount = 0.05M });
 			CoinInventory.Add(new CoinModel { Name = "Nickle", Amount = 0.05M });
 			CoinInventory.Add(new CoinModel { Name = "Nickle", Amount = 0.05M });
@@ -29,7 +29,6 @@ namespace SodaMachineLibrary.Tests.Mocks
 
 			MachineInfo = (0.75M, 25.65M, 201.50M);
 
-			SodaInventory.Add(new SodaModel { Name = "Coke", SlotOccupied = "1" });
 			SodaInventory.Add(new SodaModel { Name = "Coke", SlotOccupied = "1" });
 			SodaInventory.Add(new SodaModel { Name = "Coke", SlotOccupied = "1" });
 			SodaInventory.Add(new SodaModel { Name = "Coke", SlotOccupied = "1" });
@@ -95,9 +94,26 @@ namespace SodaMachineLibrary.Tests.Mocks
 			return SodaInventory;
 		}
 
-		public SodaModel SodaInventory_GetSoda(SodaModel soda)
+		public bool SodaInventory_CheckIfSodaInStock(SodaModel soda)
 		{
-			return SodaInventory.Where(x => x.Name == soda.Name).FirstOrDefault();
+			var outputSoda = SodaInventory.Where(x => x.Name == soda.Name).FirstOrDefault();
+
+			return outputSoda != null;
+		}
+
+		public SodaModel SodaInventory_GetSoda(SodaModel soda, decimal amount)
+		{
+			var outputSoda = SodaInventory.Where(x => x.Name == soda.Name).FirstOrDefault();
+
+			if (outputSoda != null)
+			{ 
+				var info = MachineInfo;
+				info.cashOnHand += amount;
+				info.totalIncome += amount;
+				MachineInfo = info;
+			}
+
+			return outputSoda;
 		}
 
 		public List<SodaModel> SodaInventory_GetTypes()

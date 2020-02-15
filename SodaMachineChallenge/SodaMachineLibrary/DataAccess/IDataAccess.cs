@@ -6,7 +6,8 @@ namespace SodaMachineLibrary.DataAccess
 	public interface IDataAccess
 	{
 		List<SodaModel> SodaInventory_GetTypes();
-		SodaModel SodaInventory_GetSoda(SodaModel soda);
+		bool SodaInventory_CheckIfSodaInStock(SodaModel soda);
+		SodaModel SodaInventory_GetSoda(SodaModel soda, decimal amount);
 		void SodaInventory_AddSoda(List<SodaModel> sodas);
 		List<SodaModel> SodaInventory_GetAll();
 		void UserCredit_Insert(string userId, decimal amount);
