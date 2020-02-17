@@ -1,5 +1,5 @@
 # SodaMachine
-Week 53-59 of Tim Corey's Weekly Challenges
+Week 53-60 of Tim Corey's Weekly Challenges
 
 ## Soda Machine Project Planning Challenge
 [Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=53)  
@@ -28,3 +28,6 @@ Week 53-59 of Tim Corey's Weekly Challenges
 ## Soda Machine Console Challenge Part 2
 [Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=59)  
 [Documentation](https://www.filepicker.io/api/file/0wYtIpPAR0aYMqlytI0u)  
+## Soda Machine Console Challenge Part 2
+[Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=60)  
+[Documentation](https://www.filepicker.io/api/file/b79Vw9riSISd9TS62LNA)  
