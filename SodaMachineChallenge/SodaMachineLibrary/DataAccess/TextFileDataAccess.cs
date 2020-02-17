@@ -18,10 +18,10 @@ namespace SodaMachineLibrary.DataAccess
 		public TextFileDataAccess(IConfiguration config)
 		{
 			_config = config;
-			coinTextFile = _config.GetValue<string>("TextFileStorage.Coins");
-			sodaTextFile = _config.GetValue<string>("TextFileStorage.Soda");
-			machineInfoTextFile = _config.GetValue<string>("TextFileStorage.MachineInfo");
-			userCreditTextFile = _config.GetValue<string>("TextFileStorage.UserCredit");
+			coinTextFile = _config.GetValue<string>("TextFileStorage:Coins");
+			sodaTextFile = _config.GetValue<string>("TextFileStorage:Soda");
+			machineInfoTextFile = _config.GetValue<string>("TextFileStorage:MachineInfo");
+			userCreditTextFile = _config.GetValue<string>("TextFileStorage:UserCredit");
 		}
 
 		private List<CoinModel> RetrieveCoins()
