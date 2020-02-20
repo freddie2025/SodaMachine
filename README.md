@@ -1,7 +1,8 @@
 # Soda Machine
-A C# application that performs all the functions of a soda machine.
 
-[![Build Status](https://dev.azure.com/FredJames/SodaMachineChallenge/_apis/build/status/SodaMachineChallenge-.NET%20Desktop-CI?branchName=master)](https://dev.azure.com/FredJames/SodaMachineChallenge/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://dev.azure.com/FredJames/SodaMachineChallenge/_apis/build/status/SodaMachineChallenge-.NET%20Desktop-CI?branchName=master)](https://dev.azure.com/FredJames/SodaMachineChallenge/_build/latest?definitionId=1&branchName=master)  
+
+A C# application that performs all the functions of a soda machine.  
 
 ## Soda Machine Project Planning Challenge
 [Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=53)  
