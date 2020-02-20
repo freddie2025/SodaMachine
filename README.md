@@ -1,5 +1,7 @@
-# SodaMachine
-Week 53-60 of Tim Corey's Weekly Challenges
+# Soda Machine
+A C# application that performs all the functions of a soda machine.
+
+[![Build Status](https://dev.azure.com/FredJames/SodaMachineChallenge/_apis/build/status/SodaMachineChallenge-.NET%20Desktop-CI?branchName=master)](https://dev.azure.com/FredJames/SodaMachineChallenge/_build/latest?definitionId=1&branchName=master)
 
 ## Soda Machine Project Planning Challenge
 [Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=53)  
@@ -31,3 +33,9 @@ Week 53-60 of Tim Corey's Weekly Challenges
 ## Soda Machine Source Control Challenge
 [Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=60)  
 [Documentation](https://www.filepicker.io/api/file/b79Vw9riSISd9TS62LNA)  
+## Soda Machine Continuous Integration Challenge
+[Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=61)  
+[Documentation](https://www.filepicker.io/api/file/lMYKrebGSGSD3RAmUSNG)  
+## Soda Machine Razor Pages with Auth Challenge
+[Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=62)  
+[Documentation](https://www.filepicker.io/api/file/3IWu6GwTveUAnH5F9jgW)  
