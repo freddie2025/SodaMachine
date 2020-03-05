@@ -12,6 +12,8 @@ using SodaMachineRazorUI.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SodaMachineLibrary.Logic;
+using SodaMachineLibrary.DataAccess;
 
 namespace SodaMachineRazorUI
 {
@@ -32,6 +34,10 @@ namespace SodaMachineRazorUI
 					Configuration.GetConnectionString("DefaultConnection")));
 			services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
 				.AddEntityFrameworkStores<ApplicationDbContext>();
+
+			services.AddTransient<IDataAccess, TextFileDataAccess>();
+			services.AddTransient<ISodaMachineLogic, SodaMachineLogic>();
+
 			services.AddRazorPages();
 		}
 

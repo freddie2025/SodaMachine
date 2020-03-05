@@ -40,3 +40,6 @@ A C# application that performs all the functions of a soda machine.
 ## Soda Machine Razor Pages with Auth Challenge
 [Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=62)  
 [Documentation](https://www.filepicker.io/api/file/3IWu6GwTveUAnH5F9jgW)  
+## Soda Machine Razor Pages User Logic Challenge
+[Requirement Video](https://www.youtube.com/watch?v=1aQFHhTJMYs&list=PLLWMQd6PeGY1VcJGocm1wwtFCZUrh2sc9&index=63)  
+[Documentation](https://www.filepicker.io/api/file/CiBUYwgJTu20wLuiDuJO)  
