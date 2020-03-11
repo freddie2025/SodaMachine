@@ -3,6 +3,69 @@
 @{
     ViewData["Title"] = "SodaMachine";
 }
+<!-- https://getbootstrap.com -->
 
-<h1>SodaMachine</h1>
+<h1>Soda Machine</h1>
+<h5>Soda Price: @String.Format("{0:C}", Model.SodaPrice)</h5>
+<h5>Deposited Amount: @String.Format("{0:C}", Model.DepositedAmount)</h5>
 
+@if (String.IsNullOrWhiteSpace(Model.ErrorMessage) == false)
+{
+    <p class="text-danger">
+        @Model.ErrorMessage
+    </p>
+}
+
+<div class="row">
+    <div class="col-sm-8">
+        @foreach (var soda in Model.SodaOptions)
+        {
+            <div class="row">
+                <div class="col-sm-8 soda-tab bg-secondary text-white">
+                    @soda.Name
+                </div>
+                <div class="col-sm-4">
+                    <form method="post" asp-page-handler="Soda">
+                        <input type="hidden" asp-for="UserId" />
+                        <input type="hidden" asp-for="SelectedSoda.Name" value="@soda.Name" />
+                        <input type="hidden" asp-for="SelectedSoda.SlotOccupied" value="@soda.SlotOccupied" />
+                        <button type="submit" class="btn btn-primary btn-soda">Buy</button>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-sm-4">
+        @Html.Raw(Model.OutputText)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <h3>Deposit Coins</h3>
+        <div class="btn-group" role="group">
+            <form method="post">
+                <input type="hidden" asp-for="UserId" />
+                <input type="hidden" asp-for="Deposit" value="0.05" />
+                <button type="submit" class="btn btn-primary">@String.Format("{0:C}", 0.05)</button>
+            </form>
+            <form method="post">
+                <input type="hidden" asp-for="UserId" />
+                <input type="hidden" asp-for="Deposit" value="0.10" />
+                <button type="submit" class="btn btn-primary">@String.Format("{0:C}", 0.10)</button>
+            </form>
+            <form method="post">
+                <input type="hidden" asp-for="UserId" />
+                <input type="hidden" asp-for="Deposit" value="0.25" />
+                <button type="submit" class="btn btn-primary">@String.Format("{0:C}", 0.25)</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <h3>Cancel Transaction</h3>
+        <form method="post" asp-page-handler="Cancel">
+            <input type="hidden" asp-for="UserId" />
+            <button type="submit" class="btn btn-warning">Eject Money</button>
+        </form>
+    </div>
+</div>
